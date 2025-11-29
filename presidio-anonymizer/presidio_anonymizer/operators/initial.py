@@ -5,8 +5,8 @@ class Initial(Operator):
     """Convert the entered name into initials"""
 
     def operate(self, text: str = None, params: Dict = None) -> str:
-        """:return: an empty value."""
-        return ""
+        """returns the initials"""
+        return self.return_initial(text)
 
     def validate(self, params: Dict = None) -> None:
         """Redact does not require any parameters so no validation is needed."""
@@ -19,3 +19,13 @@ class Initial(Operator):
     def operator_type(self) -> OperatorType:
         """Return operator type."""
         return OperatorType.Anonymize
+    
+    @staticmethod
+    def return_initial(text: str):
+        """Return the initials of the given name"""
+        indWords = text.split()
+        initialChar = ""
+        for i in indWords:
+            newChar = (i[0])
+            initialChar = initialChar + newChar + ". "
+        return initialChar[:-1]
