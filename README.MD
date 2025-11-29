@@ -17,13 +17,13 @@ to the anonymize method in AnonymizerEngine Class (line 104)
 ```
 
 * How many if/elif branches are used in selecting the operator?
-*Put your answer here*
+*9*
 
 * What data structure (a Python data type) exactly is used to select the operator?
-*Put your answer here*
+*Dictionary*
 
 * Explain how "Strategy" design pattern is reflected here.
-
+*The operator factory takes operators and turns them into objects. By placing them in a dictionary, we can easily switch them out.*
 
 ---
 
