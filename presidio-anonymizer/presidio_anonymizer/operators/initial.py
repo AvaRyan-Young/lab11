@@ -27,5 +27,9 @@ class Initial(Operator):
         initialChar = ""
         for i in indWords:
             newChar = (i[0])
-            initialChar = initialChar + newChar + ". "
+            print(newChar)
+            while newChar.isalnum() == False:
+                initialChar = initialChar + newChar
+                newChar = (i[+1])
+            initialChar = initialChar + newChar.capitalize() + ". "
         return initialChar[:-1]

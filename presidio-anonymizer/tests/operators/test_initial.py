@@ -6,6 +6,10 @@ from presidio_anonymizer.operators import Initial
     "input_text, initials",
     [
         ("John Smith", "J. S."),
+        ("     Eastern    Michigan   University ", "E. M. U."),
+        ("@abc", "@A."),
+        ("@843A", "@8."),
+        ("--**abc", "--**A."),
     ],
 )
 
