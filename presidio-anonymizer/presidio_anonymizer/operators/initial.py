@@ -26,10 +26,10 @@ class Initial(Operator):
         indWords = text.split()
         initialChar = ""
         for i in indWords:
-            newChar = (i[0])
-            print(newChar)
-            while newChar.isalnum() == False:
-                initialChar = initialChar + newChar
-                newChar = (i[+1])
-            initialChar = initialChar + newChar.capitalize() + ". "
+            for x in i:
+                if x.isalnum() == False:
+                    initialChar = initialChar + x
+                else:
+                    initialChar = initialChar + x.capitalize() + ". "
+                    break
         return initialChar[:-1]
